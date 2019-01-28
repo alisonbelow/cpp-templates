@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.12)
+
+project(ex2_expl_instantiation)
+
+set(TEST_LIBRARY_LOC
+    ${CMAKE_CURRENT_SOURCE_DIR}/../test
+)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${TEST_LIBRARY_LOC}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${TEST_LIBRARY_LOC}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${TEST_LIBRARY_LOC}/bin)
+
+include_directories(
+    .
+)
+
+set(${PROJECT_NAME}_SOURCES
+    ex2.cpp
+)
+
+add_library(${PROJECT_NAME} STATIC ${${PROJECT_NAME}_SOURCES})
+
+install(TARGETS ${PROJECT_NAME} 
+        ARCHIVE DESTINATION ${TEST_LIBRARY_LOC}/lib
+        LIBRARY DESTINATION ${TEST_LIBRARY_LOC}/lib
+        RUNTIME DESTINATION ${TEST_LIBRARY_LOC}/bin)    

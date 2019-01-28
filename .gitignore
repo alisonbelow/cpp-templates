@@ -1,0 +1,11 @@
+# Ignore Visual Studio Code folder
+.vscode
+
+# Ignore these folders
+build/
+googletest/
+bin/
+lib/
+
+# Ignore static libraries
+*.a
