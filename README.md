@@ -8,12 +8,12 @@ The purpose of this repository is to exercise and practice C++ programming with 
 
 (1) The directory `compiling_and_linking` largely explains how to define and declare templated classes properly so that the code can be built and link without errors. Examples are shown for how to properly write templated classes, whether it be with the inclusion technique, explicit instantiation, or a combination of the two.
 
-(2)... TBD
+(2) The directory `polymorphism` overviews the intricacies of polymorphism with templates.
 
 
 ## Dependencies
 
-This project requires cmake >= 3.10 and gcc/g++ >= 6 for building and testing. Googletest will automatically be cloned and built during the build process, and therefore is not a dependency.
+This project requires cmake >= 3.12 and gcc/g++ >= 6 for building and testing. Googletest will automatically be cloned and built during the build process, and therefore is not a dependency.
 
 GCC/G++ Install:  
 

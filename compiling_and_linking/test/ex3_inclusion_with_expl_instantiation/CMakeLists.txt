@@ -11,16 +11,25 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../..   
 )
 
-add_executable(${PROJECT_NAME} test_ex3.cpp)
+add_executable(${PROJECT_NAME}a test_ex3a.cpp)
+add_executable(${PROJECT_NAME}b test_ex3b.cpp)
 
 set(EX3_STATIC_LIB ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/libex3_incl_w_expl_instantiation.a)
 
-target_link_libraries(${PROJECT_NAME} ${EX3_STATIC_LIB} gtest_main pthread)
+target_link_libraries(${PROJECT_NAME}a ${EX3_STATIC_LIB} gtest_main pthread)
+target_link_libraries(${PROJECT_NAME}b gtest_main pthread)
 
 # Add tests
 add_test(
     NAME
-    ${PROJECT_NAME}
+    ${PROJECT_NAME}a
     COMMAND
-    ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}}
+    ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}a}
+)
+
+add_test(
+    NAME
+    ${PROJECT_NAME}b
+    COMMAND
+    ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}b}
 )

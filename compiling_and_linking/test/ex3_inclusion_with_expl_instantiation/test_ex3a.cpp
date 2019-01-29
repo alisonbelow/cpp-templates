@@ -2,7 +2,7 @@
 
 #include "gtest/gtest.h"
 
-TEST(TEMPLATES_LINKING_AND_COMPILING, ex3_inclWExplInstantiation) 
+TEST(TEMPLATES_LINKING_AND_COMPILING, ex3_inclWExplInstantiation_a) 
 {
     f<int>();
     f<bool>();
