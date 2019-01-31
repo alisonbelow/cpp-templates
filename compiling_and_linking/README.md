@@ -1,10 +1,10 @@
 # Compiling and Linking
 
-Three examples are provided for how you can compile/link templated classes. These three methods are discussed in detail in `doc/c++_templating`. The actual testing for this is done during the build. If the example files were not built/linked properly, the build would fail, specifically during the linking phase. Each of these methods can be used to create templated classes.  
+Three examples are provided for how you can compile/link templated classes. These three methods are discussed in detail in `doc/1_compiling_and_linking`. The actual testing for this is done during the build. If the example files were not built/linked properly, the build would fail, specifically during the linking phase. Each of these methods can be used to create templated classes.  
 
 ## Example One: Inclusion Method
 
-Concept: Declarations and definitions in same header file  
+Concept: Declarations and definitions in same header file
 
 Pros:  
 - One file
